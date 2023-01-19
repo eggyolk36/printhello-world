@@ -11,6 +11,12 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     music.ringTone(262)
 })
+input.onGesture(Gesture.FreeFall, function () {
+    basic.showString("BOOOOOOOOOOOOOOOOOOOOO")
+    basic.showIcon(IconNames.Sad)
+    music.ringTone(262)
+    basic.showString("HELLO SON, I AM YOUR FATHER")
+})
 input.onGesture(Gesture.TiltLeft, function () {
     basic.showString("BOOOOOOOOOOOOOOOOOOOOO")
 })
@@ -41,4 +47,7 @@ input.onGesture(Gesture.Shake, function () {
         basic.showIcon(IconNames.Square)
         basic.showIcon(IconNames.Chessboard)
     }
+})
+input.onGesture(Gesture.TiltRight, function () {
+    basic.showString("BOOOOOOOOOOOOOOOOOOOOO")
 })

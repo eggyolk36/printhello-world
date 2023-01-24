@@ -1,6 +1,3 @@
-input.onGesture(Gesture.EightG, function () {
-    basic.showIcon(IconNames.Confused)
-})
 input.onButtonPressed(Button.A, function () {
     diyrobeknotsmelly += -1
     basic.clearScreen()
@@ -73,16 +70,6 @@ input.onGesture(Gesture.LogoUp, function () {
         basic.pause(200)
         basic.showString("PAPER!")
     }
-})
-input.onGesture(Gesture.SixG, function () {
-    basic.showIcon(IconNames.SmallHeart)
-    music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
-    basic.showIcon(IconNames.Heart)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.showIcon(IconNames.Heart)
-    music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.showIcon(IconNames.Heart)
 })
 input.onGesture(Gesture.ScreenDown, function () {
     music.playMelody("E B C5 A B G A F ", 120)
@@ -200,6 +187,16 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(game.score())
     basic.pause(500)
     game.setScore(0)
+})
+input.onGesture(Gesture.TiltRight, function () {
+    basic.showIcon(IconNames.SmallHeart)
+    music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
+    basic.showIcon(IconNames.Heart)
+    basic.showIcon(IconNames.SmallHeart)
+    basic.showIcon(IconNames.Heart)
+    music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
+    basic.showIcon(IconNames.SmallHeart)
+    basic.showIcon(IconNames.Heart)
 })
 let rockpaper = 0
 let bill = 0

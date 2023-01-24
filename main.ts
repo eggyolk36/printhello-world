@@ -3,8 +3,8 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     led.plot(diyrobeknotsmelly, mrfishy)
     led.plot(bill, bengal)
-    if (diyrobeknotsmelly <= 0) {
-        diyrobeknotsmelly = 4
+    if (diyrobeknotsmelly <= -1) {
+        diyrobeknotsmelly = 5
         basic.clearScreen()
         led.plot(diyrobeknotsmelly, mrfishy)
         led.plot(bill, bengal)
@@ -188,7 +188,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.pause(500)
     game.setScore(0)
 })
-input.onGesture(Gesture.TiltRight, function () {
+input.onGesture(Gesture.LogoDown, function () {
     basic.showIcon(IconNames.SmallHeart)
     music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
     basic.showIcon(IconNames.Heart)

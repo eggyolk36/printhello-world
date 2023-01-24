@@ -56,23 +56,6 @@ def on_gesture_six_g():
     basic.clear_screen()
 input.on_gesture(Gesture.SIX_G, on_gesture_six_g)
 
-def on_gesture_screen_up():
-    global rockpaper, benga, bill
-    rockpaper = randint(1, 3)
-    basic.show_string("rock paper scissors SHOE!")
-    if rockpaper == 1:
-        basic.clear_screen()
-        rockpaper = randint(1, 3)
-        if rockpaper == 2:
-                basic.clear_screen()
-                rockpaper = randint(1, 3)
-                if rockpaper == 3:
-                        basic.clear_screen()
-                        rockpaper = randint(1, 3)
-
-
-input.on_gesture(Gesture.SCREEN_UP, on_gesture_screen_up)
-
 def on_button_pressed_ab():
     global mrfishy, benga, bill
     mrfishy += 1
@@ -178,6 +161,45 @@ def on_gesture_shake():
     game.set_score(0)
 input.on_gesture(Gesture.SHAKE, on_gesture_shake)
 
+def on_gesture_logo_down():
+    global rockpaper
+    rockpaper = randint(1, 3)
+    basic.show_string("rock paper scissors SHOE!")
+    if rockpaper == 1:
+        basic.clear_screen()
+        rockpaper = randint(1, 3)
+        basic.show_leds("""
+            # # # # #
+                        # # # # #
+                        # # # # #
+                        # # # # #
+                        # # # # #
+        """)
+        basic.show_string("ROCK!")
+        if rockpaper == 2:
+            basic.clear_screen()
+            rockpaper = randint(1, 3)
+            basic.show_leds("""
+                . # . # .
+                                . . # . .
+                                . # . # .
+                                # # . # #
+                                # # . # #
+            """)
+            basic.show_string("SCISSORS!")
+            if rockpaper == 3:
+                basic.clear_screen()
+                rockpaper = randint(1, 3)
+                basic.show_leds("""
+                    . . . . .
+                                        # # # # #
+                                        # # # # #
+                                        # # # # #
+                                        # # # # #
+                """)
+                basic.show_string("PAPER!")
+input.on_gesture(Gesture.LOGO_DOWN, on_gesture_logo_down)
+
 def on_gesture_three_g():
     basic.show_icon(IconNames.CONFUSED)
 input.on_gesture(Gesture.THREE_G, on_gesture_three_g)
@@ -192,4 +214,4 @@ benga = randint(0, 5)
 diyrobeknotsmelly = randint(0, 5)
 mrfishy = 0
 bill = 0
-rockpaper = 0
+rockpaper = randint(1, 3)

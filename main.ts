@@ -12,8 +12,8 @@ input.onButtonPressed(Button.A, function () {
     if (diyrobeknotsmelly == bill && mrfishy == bengal) {
         basic.clearScreen()
         led.plot(diyrobeknotsmelly, mrfishy)
-        bengal = randint(0, 5)
-        bill = randint(0, 5)
+        bengal = randint(1, 4)
+        bill = randint(1, 4)
         led.plot(bill, bengal)
         game.addScore(1)
     }
@@ -26,49 +26,6 @@ input.onGesture(Gesture.FreeFall, function () {
         basic.showIcon(IconNames.Diamond)
         basic.showIcon(IconNames.Square)
         basic.showIcon(IconNames.Chessboard)
-    }
-})
-input.onGesture(Gesture.LogoUp, function () {
-    rockpaper = randint(1, 3)
-    basic.showString("RPS SHOE!")
-    if (rockpaper == 1) {
-        basic.clearScreen()
-        basic.showLeds(`
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
-        rockpaper = 1
-        basic.pause(200)
-        basic.showString("ROCK!")
-    }
-    if (rockpaper == 2) {
-        basic.clearScreen()
-        basic.showLeds(`
-            . # . # .
-            . . # . .
-            . # . # .
-            # # . # #
-            # # . # #
-            `)
-        rockpaper = 2
-        basic.pause(200)
-        basic.showString("SCISSORS!")
-    }
-    if (rockpaper == 3) {
-        basic.clearScreen()
-        basic.showLeds(`
-            . . . . .
-            # # # # #
-            # # # # #
-            # # # # #
-            # # # # #
-            `)
-        rockpaper = 3
-        basic.pause(200)
-        basic.showString("PAPER!")
     }
 })
 input.onGesture(Gesture.ScreenDown, function () {
@@ -97,8 +54,8 @@ input.onButtonPressed(Button.AB, function () {
     if (diyrobeknotsmelly == bill && mrfishy == bengal) {
         basic.clearScreen()
         led.plot(diyrobeknotsmelly, mrfishy)
-        bengal = randint(0, 5)
-        bill = randint(0, 5)
+        bengal = randint(1, 4)
+        bill = randint(1, 4)
         led.plot(bill, bengal)
         game.addScore(1)
     }
@@ -117,8 +74,8 @@ input.onButtonPressed(Button.B, function () {
     if (diyrobeknotsmelly == bill && mrfishy == bengal) {
         basic.clearScreen()
         led.plot(diyrobeknotsmelly, mrfishy)
-        bengal = randint(0, 5)
-        bill = randint(0, 5)
+        bengal = randint(1, 4)
+        bill = randint(1, 4)
         led.plot(bill, bengal)
         game.addScore(1)
     }
@@ -188,24 +145,13 @@ input.onGesture(Gesture.Shake, function () {
     basic.pause(500)
     game.setScore(0)
 })
-input.onGesture(Gesture.LogoDown, function () {
-    basic.showIcon(IconNames.SmallHeart)
-    music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
-    basic.showIcon(IconNames.Heart)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.showIcon(IconNames.Heart)
-    music.playSoundEffect(music.builtinSoundEffect(soundExpression.sad), SoundExpressionPlayMode.InBackground)
-    basic.showIcon(IconNames.SmallHeart)
-    basic.showIcon(IconNames.Heart)
-})
-let rockpaper = 0
 let bill = 0
 let mrfishy = 0
 let diyrobeknotsmelly = 0
 let bengal = 0
 let diusy = 0
-bengal = randint(0, 5)
-diyrobeknotsmelly = randint(0, 5)
+bengal = randint(1, 4)
+diyrobeknotsmelly = randint(1, 4)
 mrfishy = 0
 bill = 0
-rockpaper = randint(1, 3)
+let rockpaper = randint(1, 3)
